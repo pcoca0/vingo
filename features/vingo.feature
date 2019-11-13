@@ -8,3 +8,9 @@ Scenario: Iniciar jugada
   Given entro a pagina principal
   When presiono boton "Iniciar Juego"
   Then debo ver "Partida iniciada"
+
+Scenario: Sacar Bolilla
+  Given entro a pagina principal
+    And presiono boton "Iniciar Juego"
+  When presiono boton "Sacar Bolilla"
+  Then debo ver "RESULTADO"

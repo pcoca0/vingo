@@ -21,11 +21,15 @@ class Bingo
 	end
 	
 	def verificarCarton
-	    if @bolillaSalida == @cartonUno
-	    	return "GANO"
-	    else    
-	    	return "PERDIO"
-	    end		
+	    if @bolillaSalida.nil?
+			return ""
+		else
+			if @bolillaSalida == @cartonUno
+				return "GANO"
+			else    
+				return "PERDIO"
+			end		
+		end
 	end
 
 		

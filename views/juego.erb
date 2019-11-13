@@ -1,1 +1,11 @@
 <h1>Partida iniciada</h1>
+
+<p> Su carton tiene los siguientes numeros: <%= @@bingo.retornarCartonJugador %></p>
+
+<form method="post" action="/sacarBolilla">
+	<input type="submit" value="Sacar bolilla">
+</form>
+
+<p> Bolilla obtenida: <%= @@bingo.retornarBolillaSalida %> </p>
+
+<p> RESULTADO: <%= @@bingo.verificarCarton %> </p>

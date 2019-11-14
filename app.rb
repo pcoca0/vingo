@@ -2,23 +2,24 @@ require 'sinatra'
 require "./lib/bingo.rb"
 
 get '/' do
-  @@bingo = [1,2,3,4,5] #Bingo.new
-  @@bolillaSalida = []
-  @@bolilla = 0 #[1,2,3,4,5]
+  @@bingo = Bingo.new
+  @@resultado = ""
+  @@bolilla = 0
   erb :home
 end
 
 post '/juego' do
-  @@resultado = ""
-  #@@bingo.asignarCartonJugador 1
+  @@bingo.asignarCartonJugador
   erb :juego
 end
 
 post '/sacarBolilla' do
-  #@@bingo.sacarBolilla 1
-  @@bolillaSalida.push (@@bolilla += 1)
-  if @@bolillaSalida.count == 5
-    @@resultado = "GANO"
+  @@bingo.sacarBolilla
+
+  if @@bingo.retornarBolillaSalida.count == 5
+    @@resultado = @@bingo.verificarCarton
   end
+
   erb :juego
+
 end

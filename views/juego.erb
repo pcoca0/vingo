@@ -2,11 +2,11 @@
 <p> Su carton tiene los siguientes numeros: </p>
 <TABLE BORDER CELLPADDING=10 CELLSPACING=0>
 	<TR>
-		<TD><%= @@bingo[0] %></TD>
-		<TD><%= @@bingo[1] %></TD>
-		<TD><%= @@bingo[2] %></TD>
-		<TD><%= @@bingo[3] %></TD>
-		<TD><%= @@bingo[4] %></TD>
+		<TD><%= @@bingo.retornarCartonJugador[0][0] %></TD>
+		<TD><%= @@bingo.retornarCartonJugador[1][0] %></TD>
+		<TD><%= @@bingo.retornarCartonJugador[2][0] %></TD>
+		<TD><%= @@bingo.retornarCartonJugador[3][0] %></TD>
+		<TD><%= @@bingo.retornarCartonJugador[4][0] %></TD>
 	</TR>
 </TABLE>
 <br>
@@ -14,6 +14,6 @@
 	<input type="submit" value="Sacar bolilla">
 </form>
 
-<p> Bolilla obtenida: <%= @@bolillaSalida.to_s %> </p>
+<p> Bolilla obtenida: <%= @@bingo.retornarBolillaSalida %> </p>
 
 <p> RESULTADO: <%= @@resultado %> </p>

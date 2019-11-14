@@ -39,12 +39,13 @@ class Bingo
 				@existe=false
 				@bolillaSalida.each{|bolilla|
 					if numero[0] == bolilla
-						@existe=true						
+						@existe=true
+						numero[1]="GREEN"						
 						break			
 					end
 				}
 				if @existe == false
-					return "PERDIO"
+					return ""
 				end				
 			}
 			return "GANO"

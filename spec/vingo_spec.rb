@@ -41,22 +41,6 @@ describe "Bingo" do
 	expect( bingo.verificarCarton ).to eq "GANO"
 	end
 
-	it " Verificar que jugador perdio " do
-	bingo = Bingo.new
-	bingo.asignarCartonJugador 
-	bingo.prepararBolilla 1
-	bingo.sacarBolilla
-	bingo.prepararBolilla 2
-	bingo.sacarBolilla 
-	bingo.prepararBolilla 3
-	bingo.sacarBolilla 
-	bingo.prepararBolilla 4
-	bingo.sacarBolilla 
-	bingo.prepararBolilla 6
-	bingo.sacarBolilla  
-	expect( bingo.verificarCarton ).to eq "PERDIO"
-	end
-
 	it " Verificar que la bolilla obtenida no haya salido " do
 	bingo = Bingo.new
 	bingo.asignarCartonJugador

@@ -23,6 +23,11 @@ Scenario: Sacar las 5 Bolillas del carton
 	And asigno proxima bolilla en 3 y "Sacar Bolilla"
 	And asigno proxima bolilla en 4 y "Sacar Bolilla"
 	And asigno proxima bolilla en 5 y "Sacar Bolilla"
+	And asigno proxima bolilla en 6 y "Sacar Bolilla"
+	And asigno proxima bolilla en 7 y "Sacar Bolilla"
+	And asigno proxima bolilla en 8 y "Sacar Bolilla"
+	And asigno proxima bolilla en 9 y "Sacar Bolilla"
+	And asigno proxima bolilla en 10 y "Sacar Bolilla"
   Then debo ver "GANO"
 
 Scenario: Sacar las 5 Bolillas del carton
@@ -33,6 +38,11 @@ Scenario: Sacar las 5 Bolillas del carton
 	And asigno proxima bolilla en 1 y "Sacar Bolilla"
 	And asigno proxima bolilla en 5 y "Sacar Bolilla"
 	And asigno proxima bolilla en 4 y "Sacar Bolilla"
+	And asigno proxima bolilla en 6 y "Sacar Bolilla"
+	And asigno proxima bolilla en 9 y "Sacar Bolilla"
+	And asigno proxima bolilla en 7 y "Sacar Bolilla"
+	And asigno proxima bolilla en 8 y "Sacar Bolilla"
+	And asigno proxima bolilla en 10 y "Sacar Bolilla"
   Then debo ver "GANO"
 
 Scenario: Sacar las 5 Bolillas del carton

@@ -16,7 +16,7 @@ end
 post '/sacarBolilla' do
   @@bingo.sacarBolilla
 
-  if @@bingo.retornarBolillaSalida.count == 5
+  if @@bingo.retornarBolillaSalida.count == 10
     @@resultado = @@bingo.verificarCarton
   end
 

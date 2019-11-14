@@ -1,16 +1,39 @@
 class Bingo
 	def initialize
-		@cartonUno = nil
+		@cartonUno = [[]]
 		@bolillaSalida=[]
-	    @bolillaPreparada=nil 
+	        @bolillaPreparada=nil 
+ 		@arrayNumerosCarton=[[]]
+	        cont=0
+	        90.times do
+	          cont+=1
+	          @arrayNumerosCarton.push([cont,"WHITE"])
+	       	end
+		@arrayNumerosCarton = @arrayNumerosCarton.shuffle
+
+		@arrayNumerosBolillero=[]
+	        cont=0
+	        90.times do
+	          cont+=1
+	          @arrayNumerosBolillero.push(cont)
+	       	end
+		@arrayNumerosBolillero = @arrayNumerosBolillero.shuffle
+		
 	end
 	
 	def retornarCartonJugador
 	    @cartonUno
 	end
 
-	def asignarCartonJugador
-	    @cartonUno = [[1,"WHITE"],[2,"WHITE"],[3,"WHITE"],[4,"WHITE"],[5,"WHITE"]]			
+	def asignarCartonJugador	    	
+	    10.times do
+	    	@cartonUno.push(@arrayNumerosCarton.pop)	    
+	    end
+	    #@cartonUno = [[1,"WHITE"],[2,"WHITE"],[3,"WHITE"],[4,"WHITE"],[5,"WHITE"]]					
+	end
+	
+	def prepararCartonJugador	    	
+	    @cartonUno = [[1,"WHITE"],[2,"WHITE"],[3,"WHITE"],[4,"WHITE"],[5,"WHITE"],[6,"WHITE"],[7,"WHITE"],[8,"WHITE"],[9,"WHITE"],  [10,"WHITE"]]				
 	end
 	
 	def retornarBolillaSalida
@@ -23,7 +46,7 @@ class Bingo
 
 	def sacarBolilla 
 	    if @bolillaPreparada.nil? 
-	       @bolillaSalida.push(rand(5)+1)
+	       @bolillaSalida.push(@arrayNumerosBolillero.pop())
         else
 	       @bolillaSalida.push(@bolillaPreparada)
 	       @bolillaPreparada = nil	
@@ -34,21 +57,22 @@ class Bingo
 	def verificarCarton
 		 if @bolillaSalida == []
 			return ""
-		else
-			@cartonUno.each{|numero|
-				@existe=false
-				@bolillaSalida.each{|bolilla|
+		else	
+			count=0
+			@bolillaSalida.each{|bolilla|
+				@cartonUno.each{|numero|	
 					if numero[0] == bolilla
-						@existe=true
-						numero[1]="GREEN"						
+						numero[1]="GREEN"
+						count+=1						
 						break			
 					end
-				}
-				if @existe == false
-					return ""
-				end				
+				}				
 			}
-			return "GANO"
+			if @cartonUno.count == count
+				return "GANO"
+			else
+				return @cartonUno, @bolillaSalida
+			end
 		end
 	end
 

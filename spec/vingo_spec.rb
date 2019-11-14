@@ -4,13 +4,13 @@ describe "Bingo" do
 
 	it " Verificar que jugador no tenga carton" do
 	bingo = Bingo.new
-	expect( bingo.retornarCartonJugador).to eq nil
+	expect( bingo.retornarCartonJugador).to eq [[]]
 	end
 
 	it " Verificar que se asigna el valor [1,2,3,4,5]al jugador " do
 	bingo = Bingo.new
-	bingo.asignarCartonJugador
-	expect( bingo.retornarCartonJugador ).to eq [[1,"WHITE"],[2,"WHITE"],[3,"WHITE"],[4,"WHITE"],[5,"WHITE"]]
+	bingo.prepararCartonJugador
+	expect( bingo.retornarCartonJugador ).to eq [[1,"WHITE"],[2,"WHITE"],[3,"WHITE"],[4,"WHITE"],[5,"WHITE"],[6,"WHITE"],[7,"WHITE"],[8,"WHITE"],[9,"WHITE"],  [10,"WHITE"]]
 	end
 	
 	it " Verificar que no haya bolillas fuera del bolillero " do
@@ -27,7 +27,7 @@ describe "Bingo" do
 
 	it " Verificar si el jugador gano " do
 	bingo = Bingo.new
-	bingo.asignarCartonJugador 
+	bingo.prepararCartonJugador 
 	bingo.prepararBolilla 1
 	bingo.sacarBolilla
 	bingo.prepararBolilla 2
@@ -37,6 +37,16 @@ describe "Bingo" do
 	bingo.prepararBolilla 4
 	bingo.sacarBolilla 
 	bingo.prepararBolilla 5
+	bingo.sacarBolilla 
+	bingo.prepararBolilla 6
+	bingo.sacarBolilla 
+	bingo.prepararBolilla 7
+	bingo.sacarBolilla 
+	bingo.prepararBolilla 8
+	bingo.sacarBolilla 
+	bingo.prepararBolilla 9
+	bingo.sacarBolilla 
+	bingo.prepararBolilla 10
 	bingo.sacarBolilla 
 	expect( bingo.verificarCarton ).to eq "GANO"
 	end

@@ -8,27 +8,25 @@
 <p> Su carton tiene los siguientes numeros: </p>
 <TABLE BORDER CELLPADDING=10 CELLSPACING=0>
 	<TR>
-		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[0][1] %> > <%= @@bingo.retornarCartonJugador[0][0] %></TD>
+		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[10][1] %> > <%= @@bingo.retornarCartonJugador[10][0] %></TD>
 		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[1][1] %> ><%= @@bingo.retornarCartonJugador[1][0] %></TD>
 		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[2][1] %> ><%= @@bingo.retornarCartonJugador[2][0] %></TD>
 		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[3][1] %> ><%= @@bingo.retornarCartonJugador[3][0] %></TD>
 		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[4][1] %> ><%= @@bingo.retornarCartonJugador[4][0] %></TD>
 	</TR>
 	<TR>
-		<TD><%= @@bingo.retornarCartonJugador[0][1] %></TD>
-		<TD><%= @@bingo.retornarCartonJugador[1][1] %></TD>
-		<TD><%= @@bingo.retornarCartonJugador[2][1] %></TD>
-		<TD><%= @@bingo.retornarCartonJugador[3][1] %></TD>
-		<TD><%= @@bingo.retornarCartonJugador[4][1] %></TD>
+		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[5][1] %> > <%= @@bingo.retornarCartonJugador[5][0] %></TD>
+		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[6][1] %> ><%= @@bingo.retornarCartonJugador[6][0] %></TD>
+		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[7][1] %> ><%= @@bingo.retornarCartonJugador[7][0] %></TD>
+		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[8][1] %> ><%= @@bingo.retornarCartonJugador[8][0] %></TD>
+		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[9][1] %> ><%= @@bingo.retornarCartonJugador[9][0] %></TD>
 	</TR>
-
-
 </TABLE>
 <br>
+<img style="visibility:<%= @@imagenOculta %>" id="imgBolillero" src="https://3.bp.blogspot.com/-HledGrNKKoQ/V5-RbuC_8QI/AAAAAAAAADA/li47iv2hEEYHkGmNgMa-BA6rOJ7b4jhfgCLcB/s1600/bolas.gif">
 <form method="post" action="/sacarBolilla">
 	<input id="btnBolillero" type="submit" value="Sacar bolilla">
 </form>
-<img style="visibility:<%= @@imagenOculta %>" id="imgBolillero" src="https://3.bp.blogspot.com/-HledGrNKKoQ/V5-RbuC_8QI/AAAAAAAAADA/li47iv2hEEYHkGmNgMa-BA6rOJ7b4jhfgCLcB/s1600/bolas.gif">
 
 <p> Bolilla obtenida: <%= @@bingo.retornarBolillaSalida %> </p>
 

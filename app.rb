@@ -10,7 +10,7 @@ end
 
 post '/juego' do
   @@bingo.asignarCartonJugador
-  @@imagenOculta = "hidden"
+  @@imagenOculta = "visible"
   erb :juego
 end
 

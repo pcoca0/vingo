@@ -5,7 +5,7 @@ class Bingo
 	        @bolillaPreparada=nil 
  		@arrayNumerosCarton=[[]]
 	        cont=0
-	        90.times do
+	        30.times do
 	          cont+=1
 	          @arrayNumerosCarton.push([cont,"WHITE"])
 	       	end
@@ -13,7 +13,7 @@ class Bingo
 
 		@arrayNumerosBolillero=[]
 	        cont=0
-	        90.times do
+	        30.times do
 	          cont+=1
 	          @arrayNumerosBolillero.push(cont)
 	       	end
@@ -25,11 +25,11 @@ class Bingo
 	    @cartonUno
 	end
 
-	def asignarCartonJugador	    	
+	def asignarCartonJugador
 	    10.times do
 	    	@cartonUno.push(@arrayNumerosCarton.pop)	    
 	    end
-	    #@cartonUno = [[1,"WHITE"],[2,"WHITE"],[3,"WHITE"],[4,"WHITE"],[5,"WHITE"]]					
+	    #@cartonUno = [[1,"WHITE"],[2,"WHITE"],[3,"WHITE"],[4,"WHITE"],[5,"WHITE"],[6,"WHITE"],[7,"WHITE"],[8,"WHITE"],[9,"WHITE"],  [10,"WHITE"]]				
 	end
 	
 	def prepararCartonJugador	    	
@@ -71,7 +71,7 @@ class Bingo
 			if @cartonUno.count == count
 				return "GANO"
 			else
-				return @cartonUno, @bolillaSalida
+				return ""
 			end
 		end
 	end

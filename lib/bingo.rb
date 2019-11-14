@@ -68,7 +68,7 @@ class Bingo
 					end
 				}				
 			}
-			if @cartonUno.count == count
+			if @cartonUno.count - 1 == count
 				return "GANO"
 			else
 				return ""

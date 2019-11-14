@@ -10,16 +10,17 @@ end
 
 post '/juego' do
   @@bingo.asignarCartonJugador
+  @@imagenOculta = "hidden"
   erb :juego
 end
 
 post '/sacarBolilla' do
+
   @@bingo.sacarBolilla
+  @@imagenOculta = "visible"
 
-  if @@bingo.retornarBolillaSalida.count == 5
-    @@resultado = @@bingo.verificarCarton
-  end
-
+  @@resultado = @@bingo.verificarCarton
+	sleep 300000
   erb :juego
 
 end

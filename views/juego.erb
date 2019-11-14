@@ -1,3 +1,9 @@
+<script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+
+
 <h1>Partida iniciada</h1>
 <p> Su carton tiene los siguientes numeros: </p>
 <TABLE BORDER CELLPADDING=10 CELLSPACING=0>
@@ -8,11 +14,21 @@
 		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[3][1] %> ><%= @@bingo.retornarCartonJugador[3][0] %></TD>
 		<TD BGCOLOR=<%= @@bingo.retornarCartonJugador[4][1] %> ><%= @@bingo.retornarCartonJugador[4][0] %></TD>
 	</TR>
+	<TR>
+		<TD><%= @@bingo.retornarCartonJugador[0][1] %></TD>
+		<TD><%= @@bingo.retornarCartonJugador[1][1] %></TD>
+		<TD><%= @@bingo.retornarCartonJugador[2][1] %></TD>
+		<TD><%= @@bingo.retornarCartonJugador[3][1] %></TD>
+		<TD><%= @@bingo.retornarCartonJugador[4][1] %></TD>
+	</TR>
+
+
 </TABLE>
 <br>
 <form method="post" action="/sacarBolilla">
-	<input type="submit" value="Sacar bolilla">
+	<input id="btnBolillero" type="submit" value="Sacar bolilla">
 </form>
+<img style="visibility:<%= @@imagenOculta %>" id="imgBolillero" src="https://3.bp.blogspot.com/-HledGrNKKoQ/V5-RbuC_8QI/AAAAAAAAADA/li47iv2hEEYHkGmNgMa-BA6rOJ7b4jhfgCLcB/s1600/bolas.gif">
 
 <p> Bolilla obtenida: <%= @@bingo.retornarBolillaSalida %> </p>
 

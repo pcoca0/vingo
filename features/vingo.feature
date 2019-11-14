@@ -14,3 +14,14 @@ Scenario: Sacar Bolilla
     And presiono boton "Iniciar Juego"
   When presiono boton "Sacar Bolilla"
   Then debo ver "RESULTADO"
+
+Scenario: Sacar 5 Bolillas
+  Given entro a pagina principal
+    And presiono boton "Iniciar Juego"
+  When presiono boton "Sacar Bolilla"
+    And presiono boton "Sacar Bolilla"
+    And presiono boton "Sacar Bolilla"
+    And presiono boton "Sacar Bolilla"
+    And presiono boton "Sacar Bolilla"
+  Then debo ver "GANO"
+

@@ -1,11 +1,19 @@
 <h1>Partida iniciada</h1>
-
-<p> Su carton tiene los siguientes numeros: <%= @@bingo.retornarCartonJugador %></p>
-
+<p> Su carton tiene los siguientes numeros: </p>
+<TABLE BORDER CELLPADDING=10 CELLSPACING=0>
+	<TR>
+		<TD><%= @@bingo[0] %></TD>
+		<TD><%= @@bingo[1] %></TD>
+		<TD><%= @@bingo[2] %></TD>
+		<TD><%= @@bingo[3] %></TD>
+		<TD><%= @@bingo[4] %></TD>
+	</TR>
+</TABLE>
+<br>
 <form method="post" action="/sacarBolilla">
 	<input type="submit" value="Sacar bolilla">
 </form>
 
-<p> Bolilla obtenida: <%= @@bingo.retornarBolillaSalida %> </p>
+<p> Bolilla obtenida: <%= @@bolillaSalida.to_s %> </p>
 
-<p> RESULTADO: <%= @@bingo.verificarCarton %> </p>
+<p> RESULTADO: <%= @@resultado %> </p>

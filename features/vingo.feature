@@ -43,5 +43,5 @@ Scenario: Sacar las 5 Bolillas del carton
 	And asigno proxima bolilla en 1 y "Sacar Bolilla"
 	And asigno proxima bolilla en 5 y "Sacar Bolilla"
 	And asigno proxima bolilla en 4 y "Sacar Bolilla"
-  Then debo ver "PERDIO"
+  Then debo ver "RESULTADO: "
 

@@ -18,9 +18,7 @@ post '/sacarBolilla' do
 
   @@bingo.sacarBolilla
   @@imagenOculta = "visible"
-
   @@resultado = @@bingo.verificarCarton
-	sleep 300000
   erb :juego
 
 end
